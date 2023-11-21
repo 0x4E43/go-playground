@@ -42,4 +42,21 @@ func main() {
 		println("KEY: %v", keyList[j])
 	}
 
+	//Example file writing
+	writeFilePath := "hello.txt"
+
+	writeData := []byte("Hello World")
+	fs, err := os.OpenFile(writeFilePath, os.O_APPEND, os.ModeAppend)
+	flag, err := fs.Write(writeData)
+	println(flag)
+	// err = os.WriteFile(writeFilePath, writeData, os.ModeAppend) //TODO: Append is not working
+	checkError(err)
+	fs.Close()
+
+}
+
+func checkError(err error) {
+	if err != nil {
+		panic(err)
+	}
 }
