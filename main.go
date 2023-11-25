@@ -52,3 +52,12 @@ func showOptions() {
 	fmt.Println("\nPress Esc to exit")
 	fmt.Println()
 }
+
+func createFile() {
+	//Take input from user
+	var fileName string
+	fmt.Println("Enter your database Name: ")
+	fmt.Scanln(&fileName)
+	fmt.Println("Creating database ", fileName)
+
+}
