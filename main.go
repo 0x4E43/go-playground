@@ -57,7 +57,7 @@ func createFile() {
 	//Take input from user
 	var fileName string
 	fmt.Println("Enter your database Name: ")
-	fmt.Scanln(&fileName)
+	fmt.Scanln(&fileName) //Problem Here --> Unable to take input inside one loop
 	fmt.Println("Creating database ", fileName)
 
 }
