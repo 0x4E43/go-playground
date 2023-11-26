@@ -13,6 +13,7 @@ func main1111() {
 	md := Data{make(map[string]string)}
 	md.SET("Hello", "World")
 	//This is to add dummy commit
+	//This is another commit
 	fmt.Println(md.mData["Hello"])
 }
 
