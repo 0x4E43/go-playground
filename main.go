@@ -29,9 +29,14 @@ func testConsole() {
 			os.Exit(1)
 		}
 
+		// If user enter choice and press enter, one extra new line character will be there at the input buffer
+		//This extra ScanLn will consume that
+		fmt.Scanln()
+
 		switch choice {
 		case 1:
 			fmt.Println(ini, "Creating DB")
+			createFile()
 			break
 		case 2:
 			fmt.Println(ini, "Reading DB")
@@ -54,10 +59,9 @@ func showOptions() {
 }
 
 func createFile() {
-	//Take input from user
+	// Take input from the user
 	var fileName string
 	fmt.Println("Enter your database Name: ")
-	fmt.Scanln(&fileName) //Problem Here --> Unable to take input inside one loop
+	fmt.Scanln(&fileName)
 	fmt.Println("Creating database ", fileName)
-
 }
