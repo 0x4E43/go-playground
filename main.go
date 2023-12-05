@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-	testConsole()
+	// testConsole()
+	testArraySlice()
 }
 func checkError(err error) {
 	if err != nil {
@@ -62,6 +63,43 @@ func createFile() {
 	// Take input from the user
 	var fileName string
 	fmt.Println("Enter your database Name: ")
-	fmt.Scanln(&fileName)
+	fmt.Scanln(&fileName) //assuming user will enter something
 	fmt.Println("Creating database ", fileName)
+	if createDatabase(fileName) {
+		fmt.Println("Database created successfully")
+	} else {
+		panic("something went wrong") //Later add nice color sceme
+	}
+}
+
+func createDatabase(fileName string) bool {
+	return false
+}
+
+// testing arrays and slice concept
+func testArraySlice() {
+	var arr [5]int
+	b := [5]int{1, 2, 3, 4, 5}
+
+	fmt.Println("Size: ", len(arr), " Capacity: ", cap(arr)) //Print size, capacity
+	fmt.Println("values without initialize: ", arr)          //prints the array wit all value as 0, if string empty space
+	fmt.Println("GET: ", arr[3])                             //Works, returns 0
+
+	fmt.Println("B array: ", b, "Size: ", len(arr), " Capacity: ", cap(arr)) // Declare and initialize at the same place
+
+	//SLICES --< An array without size
+
+	var s []string
+	fmt.Println("uninit:", s, s == nil, len(s) == 0) // prints emty arrray, array values are nil and size is 0
+
+	s = make([]string, 3)
+	fmt.Println("emp:", s, "len:", len(s), "cap:", cap(s)) // cap() -> capacity
+
+	s[0] = "Hello"
+	s[1] = "World"
+
+	fmt.Println("After PUT:", s, "len:", len(s), "cap:", cap(s)) // cap() -> capacity
+
+	fmt.Println("ARRAY: ", b[2:5], "Slice", s[:1]) //Both works
+
 }
