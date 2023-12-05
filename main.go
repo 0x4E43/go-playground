@@ -80,7 +80,6 @@ func createDatabase(fileName string) bool {
 func testArraySlice() {
 	var arr [5]int
 	b := [5]int{1, 2, 3, 4, 5}
-
 	fmt.Println("Size: ", len(arr), " Capacity: ", cap(arr)) //Print size, capacity
 	fmt.Println("values without initialize: ", arr)          //prints the array wit all value as 0, if string empty space
 	fmt.Println("GET: ", arr[3])                             //Works, returns 0
@@ -101,5 +100,14 @@ func testArraySlice() {
 	fmt.Println("After PUT:", s, "len:", len(s), "cap:", cap(s)) // cap() -> capacity
 
 	fmt.Println("ARRAY: ", b[2:5], "Slice", s[:1]) //Both works
+	s = append(s, "d")
+	s = append(s, "e", "f")
+	fmt.Println("apd:", s)
 
+	fmt.Println("After PUT:", s, "len:", len(s), "cap:", cap(s))
+
+	//Under standinc copy
+	c := make([]string, len(s))
+	copy(c, s) //can be done with slices, need make() to declare slice
+	fmt.Println("cpy:", c)
 }
