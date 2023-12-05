@@ -110,4 +110,17 @@ func testArraySlice() {
 	c := make([]string, len(s))
 	copy(c, s) //can be done with slices, need make() to declare slice
 	fmt.Println("cpy:", c)
+
+	//MAPS
+	var mp = make(map[string]int)
+
+	mp["x"] = 1
+	mp["y"] = 2
+
+	fmt.Println(mp)
+
+	//Using range
+	for k, v := range mp {
+		fmt.Println("Key: ", k, " Value: ", v)
+	}
 }
