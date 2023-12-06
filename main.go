@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func main() {
+func mai1n() {
 	// testConsole()
 	testArraySlice()
 }
