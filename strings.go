@@ -5,7 +5,7 @@ import (
 	"unicode/utf8"
 )
 
-func main() {
+func main2() {
 
 	const s = "สวัสดี"
 
