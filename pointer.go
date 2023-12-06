@@ -12,7 +12,7 @@ func pointer(val *int) {
 	val = &val2 //It only changes the local copy of the pointer
 	fmt.Println(val2, *val)
 }
-func main() {
+func main1() {
 	val := 25
 	fmt.Println("Hello Pointer", val)
 	zeroPointer(val)
