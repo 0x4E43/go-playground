@@ -10,12 +10,22 @@ type Nimai struct {
 func main() {
 	fmt.Println("Hello Struct test")
 
-	nimai := Nimai{"Nimai", 24}
+	// nimai := Nimai{"Nimai", 24}
 
 	var test []Nimai
-	test[0] = Nimai{"Nimai", 24}
-	test[1] = Nimai{"Charan", 24}
-	test[3] = Nimai{"Maikap", 24}
+	test = append(test, Nimai{"Nimai", 24})
+	test = append(test, Nimai{"Charan", 24})
+	test = append(test, Nimai{"Maikap", 24})
 
-	fmt.Println("Struct Values: ", nimai.name)
+	fmt.Println("Struct List length", len(test))
+
+	printStruct(test)
+}
+
+func printStruct(structList []Nimai) {
+
+	for i := 0; i < len(structList); i++ {
+		fmt.Println("Name: ", structList[i].name, " Age: ", structList[i].age)
+	}
+
 }
