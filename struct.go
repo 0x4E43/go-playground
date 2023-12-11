@@ -20,8 +20,17 @@ func main() {
 	fmt.Println("Struct List length", len(test))
 	// printStruct(nimai)
 	// printStructSlice(test)
+	per := CreatePerson()
+	fmt.Println("Before Edit (WITHOUT POINTER): ", per)
+	editPerson(per)
+	fmt.Println("After Edit (WITHOUT POINTER): ", per)
 
-	fmt.Println(CreatePerson().name)
+	perPnt := CreatePerson()
+	fmt.Println("Before Edit (WITH POINTER): ", perPnt)
+
+	editPersonPnt(&perPnt)
+
+	fmt.Println("After Edit(WITH POINTER)L ", perPnt)
 }
 
 func printStruct(nimai Nimai) {
@@ -45,4 +54,13 @@ type Person struct {
 func CreatePerson() Person {
 	per := Person{"Nimai Charan Maikap", 24, ""}
 	return per
+}
+
+func editPerson(person Person) {
+	person.age = 45
+	// return person
+}
+
+func editPersonPnt(per *Person) {
+	per.age = 45
 }
