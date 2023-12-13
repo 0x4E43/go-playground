@@ -8,7 +8,7 @@ type Data struct {
 	mData map[string]string
 }
 
-func main() {
+func main1111() {
 	fmt.Println("hello Map")
 	md := Data{make(map[string]string)}
 	md.SET("Hello", "World")

@@ -7,7 +7,7 @@ type Nimai struct {
 	age  int
 }
 
-func main() {
+func main11() {
 	fmt.Println("Hello Struct test")
 
 	// nimai := Nimai{"Nimai", 24}

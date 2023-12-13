@@ -11,7 +11,7 @@ func f(from string) {
 	}
 }
 
-func main() {
+func main111() {
 
 	f("direct")
 
