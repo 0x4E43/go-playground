@@ -10,7 +10,9 @@ func main() {
 	fmt.Println(arr)
 	var a = make([]int, 6)
 	for i := 0; i < len(arr); i++ {
-		a = append(a, arr[i]) // while using make() its initializing to slice with value 0
+		// a = append(a, arr[i]) // while using make() its initializing to slice with value 0
+		a[i] = arr[i] 
 	}
 	fmt.Println(a)
+
 }
