@@ -11,7 +11,15 @@ func main() {
 	var a = make([]int, 6)
 	for i := 0; i < len(arr); i++ {
 		// a = append(a, arr[i]) // while using make() its initializing to slice with value 0
-		a[i] = arr[i] // This works fine
+		// a[i] = arr[i] // This works fine
+		//lets work on sorting
+		if i != len(arr)-1{
+			if arr[i]< arr[i+1]{
+				a[i] = arr[i]
+			}else{
+				a[i]
+			}
+		}
 	}
 	fmt.Println(a)
 
