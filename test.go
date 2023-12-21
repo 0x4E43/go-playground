@@ -6,9 +6,12 @@ package main
 import "fmt"
 
 func main() {
-	arr := [6]int{2, 5, 6, 1, 3, 0}
+	arr := [6]int{13, 46, 24, 52, 20, 9}
 	fmt.Println(arr)
-	// var a = make([]int, 6)
+	selectionSort(arr)
+}
+
+func selectionSort(arr [6]int) {
 	for i := 0; i < len(arr)-1; i++ {
 		small := arr[i]
 		for j := i; j < len(arr); j++ {
@@ -21,5 +24,4 @@ func main() {
 		}
 	}
 	fmt.Println(arr)
-
 }
