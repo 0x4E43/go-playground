@@ -6,21 +6,20 @@ package main
 import "fmt"
 
 func main() {
-	arr := [6]int{2, 5, 6, 1, 3, 7}
+	arr := [6]int{2, 5, 6, 1, 3, 0}
 	fmt.Println(arr)
-	var a = make([]int, 6)
-	for i := 0; i < len(arr); i++ {
-		// a = append(a, arr[i]) // while using make() its initializing to slice with value 0
-		// a[i] = arr[i] // This works fine
-		//lets work on sorting
-		if i != len(arr)-1{
-			if arr[i]< arr[i+1]{
-				a[i] = arr[i]
-			}else{
-				a[i]
+	// var a = make([]int, 6)
+	for i := 0; i < len(arr)-1; i++ {
+		small := arr[i]
+		for j := i; j < len(arr); j++ {
+			if arr[j] <= small {
+				small = arr[j]
+				arr[j] = arr[i]
+				arr[i] = small
+
 			}
 		}
 	}
-	fmt.Println(a)
+	fmt.Println(arr)
 
 }
