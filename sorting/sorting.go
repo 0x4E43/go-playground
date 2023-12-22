@@ -7,7 +7,7 @@ import "fmt"
 // 	arr []int
 // }
 
-func SelectionSort(arr [6]int) {
+func SelectionSort(arr [7]int) {
 	for i := 0; i < len(arr)-1; i++ {
 		small := arr[i]
 		for j := i; j < len(arr); j++ {
@@ -20,4 +20,17 @@ func SelectionSort(arr [6]int) {
 		}
 	}
 	fmt.Println("SELECTION SORT: ", arr)
+}
+
+func BubbleSort(arr [7]int) {
+	for i := 0; i < len(arr)-1; i++ {
+		for j := i + 1; j < len(arr)-1; j++ {
+			small := arr[j]
+			if arr[i] > arr[j] {
+				arr[i] = arr[j]
+				arr[j] = small
+			}
+		}
+	}
+	fmt.Println("BUBBLE SORT: ", arr)
 }
