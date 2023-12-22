@@ -37,6 +37,7 @@ func countNumberOfEvenlyDividingDigits(num int) {
 
 // PROBLEM LINK: https://www.codingninjas.com/studio/problems/reverse-bits_2181102
 func reverseBits(num int) {
+	//need to reverse bit
 	if num != 0 {
 		reverse := 0
 		for i := num; i != 0; i = i / 10 {
