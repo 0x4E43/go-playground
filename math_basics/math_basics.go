@@ -16,7 +16,8 @@ func CountNumOfDigits(num int) {
 
 	len := len(strconv.Itoa(num))
 	fmt.Println("Number of digits in(using string method) : ", num, " : ", len)
-	countNumberOfEvenlyDividingDigits(num)
+	// countNumberOfEvenlyDividingDigits(num)
+	reverseBits(num)
 }
 
 // PROBLEM LINK: https://www.codingninjas.com/studio/problems/count-digits_8416387
@@ -31,5 +32,18 @@ func countNumberOfEvenlyDividingDigits(num int) {
 			}
 		}
 		fmt.Println("Num of evenly deviding digits: ", count)
+	}
+}
+
+// PROBLEM LINK: https://www.codingninjas.com/studio/problems/reverse-bits_2181102
+func reverseBits(num int) {
+	if num != 0 {
+		reverse := 0
+		for i := num; i != 0; i = i / 10 {
+			last := i % 10
+			reverse = reverse * 10
+			reverse = reverse + last
+		}
+		fmt.Println("REVERSED: ", reverse)
 	}
 }
