@@ -4,7 +4,9 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 )
 
 func main() {
@@ -16,6 +18,19 @@ func main() {
 	// // sorting.SelectionSort(arr)
 	// sorting.BubbleSort(arr)
 
-	var name string = "nimai"
-	fmt.Printf("Type: %T \n", name)
+	// var name string = "nimai"
+	// fmt.Printf("Type: %T \n", name)
+	//Taking userinput from commandline
+	fmt.Println("Enter the reading for user input: ")
+	reader := bufio.NewReader(os.Stdin)
+
+	//comma, OK / err, OK syntax
+	input, err := reader.ReadString('\n')
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("You entered:", input)
+	fmt.Printf("\nYour input type: %T", input)
+
 }
