@@ -31,6 +31,6 @@ func main() {
 	}
 
 	fmt.Println("You entered:", input)
-	fmt.Printf("\nYour input type: %T", input)
+	fmt.Printf("\nYour input type: %T\n", input) //Printf needs \n at end, otherwise it wont print anything
 
 }
