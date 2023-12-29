@@ -21,16 +21,24 @@ func main() {
 	// var name string = "nimai"
 	// fmt.Printf("Type: %T \n", name)
 	//Taking userinput from commandline
-	fmt.Println("Enter the reading for user input: ")
+	// fmt.Println("Enter the reading for user input: ")
+	// reader := bufio.NewReader(os.Stdin)
+
+	// //comma, OK / err, OK syntax
+	// input, err := reader.ReadString('\n')
+	// if err != nil {
+	// 	panic(err)
+	// }
+
+	// fmt.Println("You entered:", input)
+	// fmt.Printf("\nYour input type: %T\n", input) //Printf needs \n at end, otherwise it wont print
+
+	fmt.Println("Pizza Rating Application")
 	reader := bufio.NewReader(os.Stdin)
 
-	//comma, OK / err, OK syntax
-	input, err := reader.ReadString('\n')
-	if err != nil {
-		panic(err)
-	}
+	fmt.Println("Enter your rating: (1-5)")
 
-	fmt.Println("You entered:", input)
-	fmt.Printf("\nYour input type: %T\n", input) //Printf needs \n at end, otherwise it wont print anything
+	input, _ := reader.ReadString('\n')
 
+	fmt.Println("Input is : ", input)
 }
