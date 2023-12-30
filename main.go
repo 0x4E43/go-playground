@@ -52,6 +52,6 @@ func main() {
 	if err != nil {
 		fmt.Println("Error: ", err)
 	} else {
-		fmt.Println("Adding 1 ", numRating+1)
+		fmt.Println("Adding +1 ", numRating+1)
 	}
 }
