@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func main() {
@@ -43,7 +44,10 @@ func main() {
 
 	fmt.Println("Thank you for rating, ", input)
 
-	numRating, err := strconv.ParseFloat(input, 64)
+	//Trim string before conversion
+
+	input = strings.TrimSpace(input)
+	numRating, err := strconv.ParseFloat(input, 64) //error will come because \n is added to input
 
 	if err != nil {
 		fmt.Println("Error: ", err)
