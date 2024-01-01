@@ -8,5 +8,7 @@ import (
 )
 
 func main() {
-	basics.IOOperation()
+	// basics.IOOperation() //Working
+
+	basics.TimeHandling()
 }
