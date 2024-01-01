@@ -45,4 +45,9 @@ func TimeHandling() {
 
 	fmt.Println("Formatted Time With Day and Hours: ", currTime.Format("01-02-2006 Monday 15:04:05")) //The day go developed
 
+	dummyDate := time.Date(1999, time.June, 14, 12, 5, 0, 0, time.UTC)
+
+	fmt.Println("Dummy Date: ", dummyDate)
+	fmt.Println("Formatted Dummy Date: ", dummyDate.Format("01-02-2006 Monday"))
+
 }
