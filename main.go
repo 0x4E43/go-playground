@@ -8,6 +8,10 @@ import (
 )
 
 func main() {
+	//Building aplication
+	//go build
+	//Extended: GOOS="linux" go build
+
 	// basics.IOOperation() //Working
 
 	basics.TimeHandling()
