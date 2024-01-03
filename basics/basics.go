@@ -49,5 +49,16 @@ func TimeHandling() {
 
 	fmt.Println("Dummy Date: ", dummyDate)
 	fmt.Println("Formatted Dummy Date: ", dummyDate.Format("01-02-2006 Monday"))
+}
+
+func Memorymanagement() {
+	//Go mamnages memory by its own
+	//If anything required
+	// new Vs make()
+	//new -> allocate memory but do not initialize
+	// make()-> does both
+	// both will give a memory address
+	// new -> zeroed storage
+	//make -> non zeroed storage
 
 }
