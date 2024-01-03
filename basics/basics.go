@@ -58,7 +58,12 @@ func MemoryManagement() {
 	//new -> allocate memory but do not initialize
 	// make()-> does both
 	// both will give a memory address
-	// new -> zeroed storage
-	//make -> non zeroed storage
+	// new -> zeroed storage --> can not put initial values
+	//make -> non zeroed storage --> can put initial values
+
+	//MORE
+	// GC happens automatically --> in case of out of scope or nil
+
+	//When to use new() and when to use make()
 
 }
