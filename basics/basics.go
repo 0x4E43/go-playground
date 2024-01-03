@@ -66,4 +66,6 @@ func MemoryManagement() {
 
 	//When to use new() and when to use make()
 
+	//https://pkg.go.dev/runtime
+
 }
