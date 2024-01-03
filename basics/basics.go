@@ -51,7 +51,7 @@ func TimeHandling() {
 	fmt.Println("Formatted Dummy Date: ", dummyDate.Format("01-02-2006 Monday"))
 }
 
-func Memorymanagement() {
+func MemoryManagement() {
 	//Go mamnages memory by its own
 	//If anything required
 	// new Vs make()
