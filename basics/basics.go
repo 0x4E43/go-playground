@@ -51,21 +51,18 @@ func TimeHandling() {
 	fmt.Println("Formatted Dummy Date: ", dummyDate.Format("01-02-2006 Monday"))
 }
 
-func MemoryManagement() {
-	//Go mamnages memory by its own
-	//If anything required
-	// new Vs make()
-	//new -> allocate memory but do not initialize
-	// make()-> does both
-	// both will give a memory address
-	// new -> zeroed storage --> can not put initial values
-	//make -> non zeroed storage --> can put initial values
+//Go mamnages memory by its own
+//If anything required
+// new Vs make()
+//new -> allocate memory but do not initialize
+// make()-> does both
+// both will give a memory address
+// new -> zeroed storage --> can not put initial values
+//make -> non zeroed storage --> can put initial values
 
-	//MORE
-	// GC happens automatically --> in case of out of scope or nil
+//MORE
+// GC happens automatically --> in case of out of scope or nil
 
-	//When to use new() and when to use make()
+//When to use new() and when to use make()
 
-	//https://pkg.go.dev/runtime
-
-}
+//https://pkg.go.dev/runtime
