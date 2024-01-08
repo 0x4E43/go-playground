@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/0x4E43/go-playground/basics"
+	"github.com/0x4E43/go-playground/db"
 )
 
 func main() {
@@ -21,12 +19,14 @@ func main() {
 	// fmt.Println("test")
 
 	// basics.NeoVimTestHands()
-	basics.StructureFunc()
+	// basics.StructureFunc()
 
-	s := basics.Student{
-		Name: "Hello",
-		Age:  24,
-	}
-	name := s.AddName("World")
-	fmt.Println(name)
+	// s := basics.Student{
+	// 	Name: "Hello",
+	// 	Age:  24,
+	// }
+	// name := s.AddName("World")
+	// fmt.Println(name)
+
+	db.Db()
 }
