@@ -9,7 +9,7 @@ import (
 )
 
 func Db() {
-	user := "nimai"
+	user := "nimai" //need to be taken from .env
 	passw := ""
 	db, err := sql.Open("mysql", user+":"+passw+"@tcp(10.10.10.11:3306)/report_generator")
 	defer db.Close()
