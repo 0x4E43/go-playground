@@ -16,12 +16,16 @@ func init() {
 		panic(err)
 	}
 }
+
 func Db() {
 
-	fmt.Println(os.Getenv("DB_NAME"))
-	user := "nimai" //need to be taken from .env
-	passw := ""
-	db, err := sql.Open("mysql", user+":"+passw+"@tcp(10.10.10.11:3306)/report_generator")
+	DB_NAME := os.Getenv("DB_NAME")
+	DB_URL := os.Getenv("DB_URL")
+	DB_PORT := os.Getenv("DB_PORT")
+	DB_USER := os.Getenv("DB_USER")
+	DB_PASS := os.Getenv("DB_PASS")
+
+	db, err := sql.Open("mysql", DB_USER+":"+DB_PASS+"@tcp("+DB_URL+":"+DB_PORT+")/"+DB_NAME)
 	defer db.Close()
 	if err != nil {
 		panic(err)
