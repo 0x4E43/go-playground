@@ -34,10 +34,12 @@ func Db() {
 	db.SetConnMaxLifetime(time.Second * 30)
 
 	query := "SELECT * FROM node_master"
-	res, err := db.Exec(query)
+	rows, err := db.Query(query)
+	defer rows.Close()
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(res)
+
+	fmt.Println(rows.Columns()) //prints db columns
 
 }
