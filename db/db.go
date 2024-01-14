@@ -41,5 +41,18 @@ func Db() {
 	}
 
 	fmt.Println(rows.Columns()) //prints db columns
+	// needs to scan results
 
+	var dbresult []NodeMaster
+
+	for rows.Next() {
+		var nodeData NodeMaster
+		if err := rows.Scan(&nodeData.Id, &nodeData.DeviceId, &nodeData.ControllerId,
+			&nodeData.IEEAddress, &nodeData.Intensity, &nodeData.Occupancy,
+			&nodeData.IsIntensitySent, &nodeData.IsOccupancySent); err != nil {
+			panic(err)
+		}
+		dbresult = append(dbresult, nodeData)
+	}
+	fmt.Println(dbresult)
 }
