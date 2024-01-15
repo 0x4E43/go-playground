@@ -55,4 +55,11 @@ func Db() {
 		dbresult = append(dbresult, nodeData)
 	}
 	fmt.Println(dbresult)
+
+	sql2 := "CREATE TABLE IF NOT EXISTS student( id INTEGER, name VARCHAR(250), age INTEGER)"
+	res, err := db.Exec(sql2)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(res.RowsAffected())
 }
