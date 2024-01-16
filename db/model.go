@@ -10,3 +10,9 @@ type NodeMaster struct {
 	IsIntensitySent int8
 	IsOccupancySent int8
 }
+
+type Student struct {
+	Id     int16
+	Name   string
+	RollNo int16
+}

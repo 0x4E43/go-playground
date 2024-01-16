@@ -62,4 +62,16 @@ func Db() {
 		panic(err)
 	}
 	fmt.Println(res.RowsAffected())
+
+	sql3 := "INSERT INTO student (id, name, age) VALUES(12, 'Nimai Charan', 24)"
+
+	sol, err := db.Exec(sql3)
+	if err != nil {
+		panic(err)
+	}
+	count, err := sol.RowsAffected()
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("ON INSERT: ", count)
 }
