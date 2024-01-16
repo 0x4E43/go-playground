@@ -66,3 +66,16 @@ func TimeHandling() {
 //When to use new() and when to use make()
 
 //https://pkg.go.dev/runtime
+
+func PanicAndRecover() {
+	defer func() {
+		fmt.Println(recover()) //This will print the message passed into the Panic and stop run time error
+	}()
+	panic("This is Panic") //This will cause runtime error
+}
+
+
+
+func test()  {
+  fmt.Println("Hell0")
+}
