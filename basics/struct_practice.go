@@ -3,18 +3,23 @@ package basics
 import "fmt"
 
 type Student struct{
-  name string
-  age int8
+  Name string
+  Age int8
 }
 
 
 func StructureFunc(){
 
   str := Student{
-    name: "Nimai",
-    age: 24,
+    Name: "Nimai",
+    Age: 24,
   }
 
-  fmt.Printf("Name: %s | Age : %d ",str.name, str.age)
+  fmt.Printf("Name: %s | Age : %d ",str.Name, str.Age)
 
+}
+
+func (s *Student) AddName( name string)(string){
+  s.Name = name
+  return s.Name
 }
