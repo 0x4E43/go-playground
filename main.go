@@ -19,4 +19,6 @@ func main() {
 	fmt.Println("hello")
 	basics.PanicAndRecover()
 	fmt.Println("test")
+
+	basics.NeoVimTestHands()
 }
